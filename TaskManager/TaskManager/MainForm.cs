@@ -132,5 +132,11 @@ namespace TaskManager
 			//MessageBox.Show(this, listViewProcesses.SelectedItems[0].Text, "Selected PID", MessageBoxButtons.OK);
 			d_processes[Convert.ToInt32(listViewProcesses.SelectedItems[0].Text)].Kill();
 		}
+
+		private void listViewProcesses_ColumnClick(object sender, ColumnClickEventArgs e)
+		{
+			listViewProcesses.ListViewItemSorter = new Comparer(e.Column);
+			//https://stackoverflow.com/questions/1548312/sorting-a-listview-by-column
+		}
 	}
 }

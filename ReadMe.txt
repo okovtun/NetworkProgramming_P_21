@@ -9,6 +9,7 @@ TODO:
 5. Выровнять числовые значения в столбцах по правому краю;
 6. В интерфейс программы добавить возможность выбирать столбцы;
 7. Добавить сортировку списка процессов;
+	https://stackoverflow.com/questions/1548312/sorting-a-listview-by-column
 	https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/csharp/language-compilers/sort-listview-by-column
 
 CommandLineWindow:	DONE

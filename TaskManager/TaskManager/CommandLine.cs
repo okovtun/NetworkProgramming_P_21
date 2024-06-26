@@ -62,6 +62,7 @@ namespace TaskManager
 
 		private void comboBoxFilename_KeyPress(object sender, KeyPressEventArgs e)
 		{
+			//Doesn't work with Autocomplete:Suggest
 			//if (e.KeyChar == (char)Keys.Enter) buttonOK_Click(sender, e);
 			//if (e.KeyChar == (char)Keys.Escape) Close();
 		}
@@ -69,11 +70,6 @@ namespace TaskManager
 		private void CommandLine_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			comboBoxFilename.Focus();
-		}
-
-		private void comboBoxFilename_KeyUp(object sender, KeyEventArgs e)
-		{
-
 		}
 
 		private void comboBoxFilename_KeyDown(object sender, KeyEventArgs e)
@@ -97,14 +93,5 @@ namespace TaskManager
 				comboBoxFilename.Text = open.FileName;
 			}
 		}
-
-		//private void CommandLine_KeyPress(object sender, KeyPressEventArgs e)
-		//{
-		//	if (e.KeyChar == (char)Keys.Enter)
-		//	{
-		//		buttonOK_Click(sender, e);
-		//	}
-		//	if (e.KeyChar == (char)Keys.Escape) Close();
-		//}
 	}
 }
