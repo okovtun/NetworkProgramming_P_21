@@ -40,9 +40,12 @@
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.runToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.contextMenuStripProcess = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabControl.SuspendLayout();
 			this.tabPageProcesses.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
+			this.contextMenuStripProcess.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabControl
@@ -71,6 +74,7 @@
 			// 
 			// listViewProcesses
 			// 
+			this.listViewProcesses.ContextMenuStrip = this.contextMenuStripProcess;
 			this.listViewProcesses.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.listViewProcesses.FullRowSelect = true;
 			this.listViewProcesses.HideSelection = false;
@@ -138,6 +142,20 @@
 			this.exitToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			// 
+			// contextMenuStripProcess
+			// 
+			this.contextMenuStripProcess.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.closeToolStripMenuItem});
+			this.contextMenuStripProcess.Name = "contextMenuStripProcess";
+			this.contextMenuStripProcess.Size = new System.Drawing.Size(181, 48);
+			// 
+			// closeToolStripMenuItem
+			// 
+			this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+			this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.closeToolStripMenuItem.Text = "Close";
+			this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +173,7 @@
 			this.tabPageProcesses.ResumeLayout(false);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
+			this.contextMenuStripProcess.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -172,6 +191,8 @@
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStripProcess;
+		private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
 	}
 }
 
